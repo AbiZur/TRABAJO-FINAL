@@ -11,8 +11,6 @@ Este es un porfolio, creado como trabajo final del 2° módulo en el marco de la
 - **HTML5**
 - **Tailwind CSS**
 
-## 📄 Licencia
-Este proyecto está bajo la licencia **MIT**.
 
 ---
 _Desarrollado por [Debora Zurita](https://github.com/AbiZur) 💻✨_
