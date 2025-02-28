@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Debora Zurita</title>
+    <link rel="shortcut icon" href="imagenes/logo/logo.nav.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c75adb51f3.js" crossorigin="anonymous"></script>
+    <script>tailwind.config = { theme: { extend: { height: { "15vh": "15vh", "25vh": "25vh", header: "232px", content: "calc(100vh - 232px)", "content-lg": "calc(100vh - 15vh)" }, inset: { "10p": "10%", "15p": "15%" }, fontFamily: { fontPrincipal: ['"Black Ops One"', "sans-serif"] }, backgroundImage: { "full-mobile": "url('imagenes/fondo/color.webp')", "full-lg": "url('imagenes/fondo/fondogrande.png')" }, animation: { wave: "wave 2s infinite", blink: "blink 1.5s infinite" }, keyframes: { wave: { "0%": { transform: "rotate(0deg)" }, "50%": { transform: "rotate(20deg)" }, "100%": { transform: "rotate(0deg)" } }, blink: { "0%, 100%": { opacity: 1 }, "50%": { opacity: 0 } } } } } }</script>
+    <style>
+        .bg-left-cover {
+            background-size: cover;
+            background-position: center
+        }
+
+        .bg-right-cover {
+            background-size: cover;
+            background-position: center
+        }
+
+        .group:active .w-full-when-active {
+            width: 100%
+        }
+
+        .border-glow {
+            border: 2px solid #3cd6eb;
+            animation: glow 1.5s infinite alternate;
+            padding: 5px
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px #3cd6eb
+            }
+
+            100% {
+                box-shadow: 0 0 20px #3cd6eb
+            }
+        }
+
+        .hover-blur:hover .hover-text {
+            opacity: 1
+        }
+
+        .hover-text {
+            transition: opacity .3s ease
+        }
+
+        .card {
+            font-size: 1rem
+        }
+
+        @media (min-width:768px) {
+            .card {
+                font-size: .875rem
+            }
+        }
+
+        @media (min-width:1024px) {
+            .card {
+                font-size: 1.rem
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #000;
+            border: 2px solid #fff;
+            opacity: .9;
+            padding: .5rem;
+            border-radius: .5rem;
+            justify-content: center;
+            transition: transform .3s
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            background-color: #000;
+            opacity: 1
+        }
+    </style>
+</head>
+
+<body class="font-fontPrincipal text-xl m-0 flex flex-col min-h-screen bg-black">
+    <header class="h-header md:h-15vh w-screen">
+        <div
+            class="bg-black text-white flex justify-between px-3 md:px-6 items-center md:fixed top-0 left-0 right-0 h-header z-10 md:h-15vh">
+            <div id=" logo.header" class="hidden rounded-full lg:flex justify-center items-center bg-black"><img
+                    src="imagenes/logo/logo.nav.png" alt="logo-nav" class="h-36 transform translate-y-2"></div>
+            <ul id="iconos.header" class="block text-white p-3 border-r-2 md:hidden w-1/5">
+                <li><a href="https://github.com/AbiZur" target="_blank"><i
+                            class="fab fa-github active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a>
+                </li>
+                <li><a href="https://www.facebook.com/debora.zurita.3" target="_blank"><i
+                            class="fab fa-facebook active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a>
+                </li>
+                <li><a href="https://www.instagram.com/zuritadebo/" target="_blank"><i
+                            class="fab fa-instagram active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a>
+                </li>
+                <li><a href="https://www.linkedin.com/in/debora-abigail-zurita-rojo-9b32142b3/" target="_blank"><i
+                            class="fab fa-linkedin active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a>
+                </li>
+            </ul>
+            <nav id="menu" class="text-right items-center text-3xl md:text-xl p3">
+                <ul class="md:flex md:justify-items-center- text-white">
+                    <li><a href="index.html" class="hover:text-[#3CD6EB] px-2"><span
+                                class="text-[#3CD6EB] text-4xl md:text-2xl">I</span>nicio</a></li>
+                    <li><a href="sobre-mi.html" class="hover:text-[#3CD6EB] px-2"><span
+                                class="text-[#3CD6EB] text-4xl md:text-2xl">S</span>obre mi</a></li>
+                    <li><a href="proyectos.html" class="hover:text-[#3CD6EB] px-2"><span
+                                class="text-[#3CD6EB] text-4xl md:text-2xl">P</span>royectos</a></li>
+                    <li><a href="contactame.html" class="hover:text-[#3CD6EB] px-2"><span
+                                class="text-[#3CD6EB] text-4xl md:text-2xl">C</span>ontactame</a></li>
+                </ul>
+            </nav>
+            <div id="iconos.header.md" class="hidden border-l-2 pl-2 text-white items-center justify-between md:block">
+                <a href="https://github.com/AbiZur" target="_blank"><i
+                        class="fab fa-github p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a><a
+                    href="https://www.linkedin.com/in/debora-abigail-zurita-rojo-9b32142b3/" target="_blank"><i
+                        class="fab fa-linkedin p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a><a
+                    href="https://www.instagram.com/zuritadebo/" target="_blank"><i
+                        class="fab fa-instagram p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a><a
+                    href="https://www.facebook.com/debora.zurita.3" target="_blank"><i
+                        class="fab fa-facebook p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i></a>
+            </div>
+        </div>
+    </header>
+    <main class="">
+        <section id="presentacion" class="bg-full-mobile md:bg-full-lg bg-center bg-cover h-content md:h-content-lg">
+            <div class="bg-black bg-opacity-50 h-full flex flex-col">
+                <div class="flex pl-8 lg:pl-64 items-center w-full h-1/2 relative">
+                    <div
+                        class="mb-4 text-base text-white bg-black bg-opacity-50 p-2 rounded-full border border-white motion-safe:animate-blink hover:shadow-[0_0_10px_rgba(255,255,255,0.9)]">
+                        <div>
+                            <h1 class="flex items-center"><span class="animate-wave">🖖🏼</span><span class="ml-2">Soy
+                                    Debora Zurita.</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex w-full h-1/2">
+                    <div class="w-1/2 text-white flex flex-col justify-center p-3 items-center mx-auto hover:">
+                        <h1 class="px-4 py-2 mb-4 md:text-xl lg:text-5xl lowercase hover:uppercase">CS DE DATOS</h1>
+                        <p class="text-center text-base md:text-lg lg:text-2xl w-[85%] md:w-[70%]">Estudio una
+                            técnicatura en Cs de Datos e Inteligencia Artificial en el ISPC.</p>
+                    </div>
+                    <div class="w-1/2 text-white p-3 flex flex-col justify-center items-center mx-auto">
+                        <h1 class="px-4 py-2 mb-4 lowercase hover:uppercase lg:text-5xl">DESARROLLO</h1>
+                        <p class="text-center text-base lg:text-2xl w-[85%] md:w-[70%]">Me encuentro cursando una
+                            diplomatura en el Nodo Tecnologico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="herramientas" class="m-4 md:h-content-lg md:flex">
+            <div id="tittle.herramientas"
+                class="flex items-end md:items-center justify-center w-full md:w-1/2 h-1/4 py-2 md:h-full bg-black">
+                <div
+                    class="px-4 py-2 mb-4 border-2 border-[#3CD6EB] lg:text-5xl lowercase animate-bounce lg:hover:uppercase text-[#3CD6EB] rounded-2xl">
+                    <h2 class="lg:text-5xl">conocimientos</h2>
+                </div>
+            </div>
+            <div id="cards.herramientas" class="flex md:w-2/3 md:h-full justify-center items-center lg:text-5xl p-2">
+                <div
+                    class="grid grid-cols-3 gap-4 bg-[#3CD6EB] p-4 rounded-xl text-white w-full h-full md:w-4/5 md:h-2/4 items-center">
+                    <div class="card">
+                        <p class="object-center h-1/2 lg:h-full md:w-1/4"><img src="imagenes/iconos/python.svg"
+                                alt="icono python"></p>
+                        <p class="h-1/2 lg:w-3/4 text-center">Python</p>
+                    </div>
+                    <div class="card">
+                        <p class="object-center h-1/2 md:h-full md:w-1/4"><img src="imagenes/iconos/numpy.svg"
+                                alt="icono numpy"></p>
+                        <p class="h-1/2 md:w-3/4 text-center">Numpy</p>
+                    </div>
+                    <div class="card">
+                        <p class="object-center h-1/2 md:h-full md:w-1/4"><img src="imagenes/iconos/pandas.svg"
+                                alt="icono pandas"></p>
+                        <p class="h-1/2 md:w-3/4 text-center">Pandas</p>
+                    </div>
+                    <div class="card">
+                        <p class="object-center h-1/2 md:h-full md:w-1/4"><img src="imagenes/iconos/html-5.svg"
+                                alt="icono html5"></p>
+                        <p class="h-1/2 md:w-3/4 text-center">HTML-5</p>
+                    </div>
+                    <div class="card">
+                        <p class="object-center h-1/2 md:h-full md:w-1/4"><img src="imagenes/iconos/css.svg"
+                                alt="icono css"></p>
+                        <p class="h-1/2 md:w-3/4 text-center">CSS</p>
+                    </div>
+                    <div class="card">
+                        <p class="object-center h-1/2 md:h-full md:w-1/4"><img src="imagenes/iconos/figma.svg"
+                                alt="icono figma"></p>
+                        <p class="h-1/2 md:w-3/4 text-center">Figma</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-black text-white border-t-2 border-white p-4 text-xl w-auto">
+        <div class="text-center mb-4"><a href="#" class="md:text-2xl font-bold uppercase tracking-wide">Contactate
+                conmigo</a></div>
+        <div class="md:flex md:justify-evenly md:items-center mb-4 space-y-4 md:space-y-0 flex flex-col md:flex-row">
+            <div class="flex justify-between md:flex-col md:items-center">
+                <p class="w-1/2 md:mb-2">GitHub</p><a class="md:mb-2 w-1/2"><a href="https://github.com/AbiZur"
+                        target="_blank"><i class="fab fa-github text-4xl"></i></a>
+            </div>
+            <div class="flex justify-between md:flex-col md:items-center">
+                <p class="md:mb-2">LinkedIn</p><a
+                    href="https://www.linkedin.com/in/debora-abigail-zurita-rojo-9b32142b3/" target="_blank"
+                    class="md:mb-2"><i class="fab fa-linkedin text-4xl"></i></a>
+            </div>
+            <div class="flex justify-between md:flex-col md:items-center">
+                <p class="md:mb-2">Facebook</p><a href="https://www.facebook.com/debora.zurita.3" target="_blank"
+                    class="md:mb-2"><i class="fab fa-facebook text-4xl"></i></a>
+            </div>
+            <div class="flex justify-between md:flex-col md:items-center">
+                <p class="md:mb-2">Instagram</p><a href="https://www.instagram.com/zuritadebo/" target="_blank"
+                    class="md:mb-2"><i class="fab fa-instagram text-4xl"></i></a>
+            </div>
+            <div class="flex justify-between md:flex-col md:items-center md:w-1/4"><img
+                    src="imagenes/logo/logo-footer.gif" alt="Logo" class="mx-auto mb-2 w-1/2 md:w-5/6 lg:w-4/6"></div>
+        </div>
+        <div class="text-center justify-center tracking-wide text-sm mt-4">
+            <p>&copy; 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

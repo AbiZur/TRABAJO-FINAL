@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactame</title>
+    <link rel="shortcut icon" href="imagenes/logo/logo.nav.png" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <!-- Iconos -->
+    <script src="https://kit.fontawesome.com/c75adb51f3.js" crossorigin="anonymous"></script>
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            height: {
+              '15vh': '15vh',
+              '25vh': '25vh',
+              'header': '232px',
+              'content': 'calc(100vh - 232px)',
+              'content-lg': 'calc(100vh - 15vh)',
+            },
+            with: {
+              'content': 'calc( 100vw - 32px)',
+            },
+            inset: {
+              '10p': '10%',
+              '15p': '15%',
+            },
+            fontFamily: {
+              'fontPrincipal': ['"Black Ops One"', 'sans-serif'],
+            },
+            backgroundImage: {
+              'full-mobile': "url('imagenes/fondo/color.webp')",
+              'full-lg': "url('imagenes/fondo/fondogrande.png')",
+              'sobre-mi': "url('imagenes/fondo/tango1.webp')",
+            },
+            animation: {
+              wave: 'wave 2s infinite',
+              blink: 'blink 1.5s infinite'
+            },
+            keyframes: {
+              wave: {
+                '0%': {
+                  transform: 'rotate(0deg)'
+                },
+                '50%': {
+                  transform: 'rotate(20deg)'
+                },
+                '100%': {
+                  transform: 'rotate(0deg)'
+                },
+              },
+              blink: {
+                '0%, 100%': {
+                  opacity: 1
+                },
+                '50%': {
+                  opacity: 0
+                }
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <!-- Custom Styles -->
+    <style>
+      .bg-left-cover {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .bg-right-cover {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .group:active .w-full-when-active {
+        width: 100%;
+      }
+
+      @layer utilities {
+        .glow {
+          text-shadow: 0 0 10px #3CD6EB, 0 0 20px #3CD6EB, 0 0 30px #3CD6EB;
+        }
+
+        .border-glow {
+          border: 2px solid #3CD6EB;
+          animation: glow 1.5s infinite alternate;
+          padding: 5px;
+        }
+
+        @keyframes glow {
+          0% {
+            box-shadow: 0 0 10px #3CD6EB;
+          }
+
+          100% {
+            box-shadow: 0 0 20px #3CD6EB;
+          }
+        }
+      }
+
+      .hover-blur:hover img {
+        filter: blur(5px);
+      }
+
+      .hover-blur:hover .hover-text {
+        opacity: 1;
+      }
+
+      .hover-text {
+        transition: opacity 0.3s ease;
+      }
+
+      .card {
+        font-size: 1rem;
+        /* text-base */
+      }
+
+      @media (min-width: 768px) {
+        .card {
+          font-size: 0.875rem;
+          /* md:text-sm */
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .card {
+          font-size: 1.rem;
+          /* lg:text-xl */
+        }
+      }
+
+      .card {
+        display: flex;
+        /* flex */
+        flex-direction: column;
+        /* flex-col */
+        align-items: center;
+        /* items-center */
+        background-color: rgba(0, 0, 0, 0.527);
+        /* bg-black */
+        border: 2px solid white;
+        /* border-2 border-white */
+        padding: 0.5rem;
+        /* p-4 */
+        border-radius: 0.5rem;
+        /* rounded-lg */
+        justify-content: center;
+        /* justify-center */
+        transition: transform 0.3s;
+        /* transition-transform duration-300 */
+      }
+
+      .card:hover {
+        transform: scale(1.1);
+        /* hover:scale-110 */
+        background-color: rgb(0, 0, 0);
+        /* hover:bg-black */
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <!--font-fontPrincipal text-xl m-0 flex flex-col min-h-screen bg-black overflow-x-hidden-->
+  <body class="font-fontPrincipal text-xl m-0 p-0 flex flex-col min-h-screen bg-black">
+    <!-- HEADER -->
+    <header class=" h-header md:h-15vh w-screen ">
+      <!-- Contenedor principal del header   -->
+      <div class="  bg-black  text-white   flex justify-between px-3 md:px-6 items-center md:fixed  top-0 left-0 right-0 h-header z-10  md:h-15vh">
+        <!-- Logo -->
+        <div id=" logo.header" class=" hidden rounded-full lg:flex justify-center items-center bg-black ">
+          <img src="imagenes/logo/logo.nav.png" alt="logo-nav" class="h-36 transform translate-y-2">
+        </div>
+        <!-- iconos para navegación móvil y tablets -->
+        <ul id="iconos.header" class="block text-white p-3  border-r-2  md:hidden w-1/5 ">
+          <li>
+            <a href="https://github.com/AbiZur" target="_blank">
+              <i class="fab fa-github  active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce  text-3xl "></i>
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/debora.zurita.3" target="_blank">
+              <i class="fab fa-facebook active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce  text-3xl "></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/zuritadebo/" target="_blank">
+              <i class="fab fa-instagram active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce  text-3xl "></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/debora-abigail-zurita-rojo-9b32142b3/" target="_blank">
+              <i class="fab fa-linkedin active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i>
+            </a>
+          </li>
+        </ul>
+        <!-- Navegación para móviles y tablets -->
+        <nav id="menu" class=" text-right   items-center   text-3xl md:text-xl p3">
+          <ul class="md:flex   md:justify-items-center- text-white">
+            <li>
+              <a href="index.html" class=" hover:text-[#3CD6EB] px-2">
+                <span class="text-[#3CD6EB] text-4xl md:text-2xl">I</span>nicio </a>
+            </li>
+            <li>
+              <a href="sobre-mi.html" class=" hover:text-[#3CD6EB] px-2">
+                <span class="text-[#3CD6EB] text-4xl md:text-2xl">S</span>obre mi </a>
+            </li>
+            <li>
+              <a href="proyectos.html" class=" hover:text-[#3CD6EB] px-2">
+                <span class="text-[#3CD6EB] text-4xl md:text-2xl">P</span>royectos </a>
+            </li>
+            <li>
+              <a href="contactame.html" class=" hover:text-[#3CD6EB] px-2">
+                <span class="text-[#3CD6EB] text-4xl md:text-2xl">C</span>ontactame </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- iconos para pantallas grandes  -->
+        <div id="iconos.header.md" class=" hidden border-l-2 pl-2 text-white items-center justify-between md:block">
+          <a href="https://github.com/AbiZur" target="_blank">
+            <i class="fab fa-github  p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/debora-abigail-zurita-rojo-9b32142b3/" target="_blank">
+            <i class="fab fa-linkedin p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i>
+          </a>
+          <a href="https://www.instagram.com/zuritadebo/" target="_blank">
+            <i class="fab fa-instagram  p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i>
+          </a>
+          <a href="https://www.facebook.com/debora.zurita.3" target="_blank">
+            <i class="fab fa-facebook  p-1 active:text-[#3CD6EB] md:hover:text-[#3CD6EB] md:hover:animate-bounce text-3xl"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main class=" h-full h-content w-content md:h-content-lg flex flex-col md: m-5 text-white border-white border-spacing-3 ">
+      <!--formulario-->
+      <section>
+        <h1 class="text-3xl text-center mb-8 glow">¡Contáctame!</h1>
+        <div class="max-w-md mx-auto bg-white p-8 rounded-lg   text-black" ">
+										<form action=" #" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium">Nombre</label>
+            <input type="text" id="name" name="name" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input type="email" id="email" name="email" class="w-full px-3 py-2 border border-gray-300 rounded-md" required>
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium">Mensaje</label>
+            <textarea id="message" name="message" rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="bg-[#3CD6EB] text-black px-4 py-2 rounded-md hover:bg-[#3CD6EB] hover:text-white">Enviar</button>
+          </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black text-white border-t-2 border-white p-4  text-xl w-auto">
+      <div class=" text-center justify-center tracking-wide text-sm mt-4-">
+        <p>&copy; 2024 Debora Zurita. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
